@@ -1,0 +1,22 @@
+#conda 
+thesis/
+.env
+__pycache__/
+*.pyc
+
+#models
+models/
+
+#build files
+dist/
+build/
+*.spec
+
+#os
+.DS_Store
+
+.env
+
+*.mp3
+*.m4a
+.claude/settings.local.json

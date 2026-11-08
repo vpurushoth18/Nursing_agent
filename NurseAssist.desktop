@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=NurseAssist
+Comment=Clinical assessment grading (WhisperX + Qwen)
+Exec=/nfs/cc-filer/home/pvelayuthan/Documents/Nuring_service_project/thesis-main/thesis-main/run_app.sh
+Icon=/nfs/cc-filer/home/pvelayuthan/Documents/Nuring_service_project/thesis-main/thesis-main/nurseassist.png
+Terminal=false
+Categories=Education;Science;

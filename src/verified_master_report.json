@@ -1,0 +1,86 @@
+{
+    "REPRODUCIBILITY_CERTIFICATE": {
+        "verification_timestamp": "2026-09-17T16:09:17.947999",
+        "result": "PASS",
+        "checks": {
+            "environment_differences": {},
+            "model_file_hash_mismatches": [],
+            "asr_transcript_match": true,
+            "speaker_id_output_match": true,
+            "scoring_output_match": true
+        },
+        "diagnostics": []
+    },
+    "COMBINED_AUDIT_LOGS": {
+        "ASR_LOG": {
+            "metadata": {
+                "python_version": "3.10.21",
+                "os": "Linux-5.14.0-503.16.1.el9_5.x86_64-x86_64-with-glibc2.34",
+                "torch_version": "2.8.0+cu126",
+                "transformers_version": "4.57.6",
+                "gpu": "NVIDIA A30",
+                "cuda_version": "12.6"
+            },
+            "hashes": {
+                "input_audio_sha256": "d5efaf3209020887a763b6eb734211ec3a5b1e3c907cbbebdc8f3d95b8623ed2",
+                "output_transcript_sha256": "bcdb09c5f582e296e50ef9891deefca5d6ff2871578593ffedd386ea70efdc40"
+            },
+            "models_used": {
+                "transcription": "whisperx/medium",
+                "diarization": "pyannote/speaker-diarization-community-1"
+            },
+            "deterministic_settings": {
+                "whisper_temperature": 0.0,
+                "compute_type": "float16",
+                "seed": 42
+            }
+        },
+        "SPEAKER_ID_LOG": {
+            "metadata": {
+                "python_version": "3.10.21",
+                "os": "Linux-5.14.0-503.16.1.el9_5.x86_64-x86_64-with-glibc2.34",
+                "torch_version": "2.8.0+cu126",
+                "transformers_version": "4.57.6",
+                "gpu": "NVIDIA A30",
+                "cuda_version": "12.6"
+            },
+            "hashes": {
+                "model_artifacts": {},
+                "prompt": "35f4231e328a024eabf11ecbe9eb819c18c3edfafc18297614cba932162badda",
+                "output": "0bfa4c4c2b1dc68060f9f3f24d3ebef382ad3cb43d290e0a629f57b07c949b70",
+                "transcript": "4f2ed4e628ae8895ab4234a2da44c6a7ee7ccfe6be99c613d60bd59637d6b31a"
+            },
+            "deterministic_settings": {
+                "fp_precision": "FP32",
+                "greedy_decoding": true,
+                "seed": 42
+            },
+            "raw": {
+                "prompt": "<|im_start|>system\nYou are labeling a clinical conversation between exactly two speakers, SPEAKER_00 and SPEAKER_01. One is the Nurse (performs the assessment, asks clinical questions, takes a history). The other is the Patient (describes symptoms, answers history questions). Read the snippet and decide which role SPEAKER_00 plays. Respond with JSON only, no prose: {\"SPEAKER_00\": \"Nurse\"} or {\"SPEAKER_00\": \"Patient\"}.<|im_end|>\n<|im_start|>user\nSPEAKER_00:  Hi, my name is Haley.\nSPEAKER_00: I'm going to be your nurse today.\nSPEAKER_00: How are you feeling?\nSPEAKER_01: Hey, Haley.\nSPEAKER_01: Nice to meet you.\nSPEAKER_01: I'm OK.\nSPEAKER_01: I just, like I said, I'm here for that pain.\nSPEAKER_01: So otherwise, I feel OK, I guess.\nSPEAKER_00:  Oh no, I'm sorry that you're in pain.\nSPEAKER_00: Okay, we'll talk about that in a little bit.\nSPEAKER_00: Before I do that, can you give me your name and date of birth?\nSPEAKER_01: Sure.\nSPEAKER_01: It's Jane Doe, 11-4-1990.\nSPEAKER_01: Okay.\nSPEAKER_00: And Jane, do you have any allergies?\nSPEAKER_00: Not that I know of.\nSPEAKER_00: Okay.\nSPEAKER_00: All right, great.\nSPEAKER_00: So I'm going to be just kind of talking about my assessment aloud just so that I can get a recording of the assessment for the documentation.\nSPEAKER_00: Is that okay with you?\nSPEAKER_00: Sure.\nSPEAKER_00: Okay.\nSPEAKER_00:  All right, so the first thing that I'm gonna talk about is your general appearance.\nSPEAKER_00: So you look calm, you are sitting erect, clean hygiene, you appear your stated age.\nSPEAKER_00: I'm gonna ask you a couple of questions.\nSPEAKER_00: So do you know where you are right now?\nSPEAKER_01: The hospital.\nSPEAKER_00: You're in the hospital, okay.\nSPEAKER_00: And what year is it?\nSPEAKER_01: 2025.\nSPEAKER_00: 2025, okay.\nSPEAKER_00: And why are you here?\nSPEAKER_01:  Originally, I came in because I've been having some pretty bad pain in my legs when I'm walking.\nSPEAKER_00: Okay, so she's alert and oriented times four, she knows herself, location and situation and time.\nSPEAKER_00: Then, so for that pain on a scale of zero to 10, how bad is the pain?\nSPEAKER_01:  I would say it's about a 7 out of 10.\nSPEAKER_01: And then when I rest, it comes down to about a 2.\nSPEAKER_00: About a 2.\nSPEAKER_00: Okay.\nSPEAKER_00: Are you in any pain right now?\nSPEAKER_01: No.\nSPEAKER_00: Okay.\nSPEAKER_00: All right.\nSPEAKER_00: So there's no, she's no stated pain, but there's also n<|im_end|>\n<|im_start|>assistant\n",
+                "response": "{\"SPEAKER_00\": \"Nurse\"}",
+                "snippet": "SPEAKER_00:  Hi, my name is Haley.\nSPEAKER_00: I'm going to be your nurse today.\nSPEAKER_00: How are you feeling?\nSPEAKER_01: Hey, Haley.\nSPEAKER_01: Nice to meet you.\nSPEAKER_01: I'm OK.\nSPEAKER_01: I just, like I said, I'm here for that pain.\nSPEAKER_01: So otherwise, I feel OK, I guess.\nSPEAKER_00:  Oh no, I'm sorry that you're in pain.\nSPEAKER_00: Okay, we'll talk about that in a little bit.\nSPEAKER_00: Before I do that, can you give me your name and date of birth?\nSPEAKER_01: Sure.\nSPEAKER_01: It's Jane Doe, 11-4-1990.\nSPEAKER_01: Okay.\nSPEAKER_00: And Jane, do you have any allergies?\nSPEAKER_00: Not that I know of.\nSPEAKER_00: Okay.\nSPEAKER_00: All right, great.\nSPEAKER_00: So I'm going to be just kind of talking about my assessment aloud just so that I can get a recording of the assessment for the documentation.\nSPEAKER_00: Is that okay with you?\nSPEAKER_00: Sure.\nSPEAKER_00: Okay.\nSPEAKER_00:  All right, so the first thing that I'm gonna talk about is your general appearance.\nSPEAKER_00: So you look calm, you are sitting erect, clean hygiene, you appear your stated age.\nSPEAKER_00: I'm gonna ask you a couple of questions.\nSPEAKER_00: So do you know where you are right now?\nSPEAKER_01: The hospital.\nSPEAKER_00: You're in the hospital, okay.\nSPEAKER_00: And what year is it?\nSPEAKER_01: 2025.\nSPEAKER_00: 2025, okay.\nSPEAKER_00: And why are you here?\nSPEAKER_01:  Originally, I came in because I've been having some pretty bad pain in my legs when I'm walking.\nSPEAKER_00: Okay, so she's alert and oriented times four, she knows herself, location and situation and time.\nSPEAKER_00: Then, so for that pain on a scale of zero to 10, how bad is the pain?\nSPEAKER_01:  I would say it's about a 7 out of 10.\nSPEAKER_01: And then when I rest, it comes down to about a 2.\nSPEAKER_00: About a 2.\nSPEAKER_00: Okay.\nSPEAKER_00: Are you in any pain right now?\nSPEAKER_01: No.\nSPEAKER_00: Okay.\nSPEAKER_00: All right.\nSPEAKER_00: So there's no, she's no stated pain, but there's also n"
+            }
+        },
+        "SCORING_LOG": {
+            "metadata": {
+                "python_version": "3.10.19",
+                "os": "Linux-5.14.0-503.16.1.el9_5.x86_64-x86_64-with-glibc2.34",
+                "torch_version": "2.8.0+cu128",
+                "transformers_version": "5.3.0.dev0",
+                "gpu": "NVIDIA A6000",
+                "cuda_version": "12.8"
+            },
+            "hashes": {
+                "model_artifacts": {},
+                "prompt": "a8cb4bdae6bf054d336824ab5d24dbcdbcdac70868087d96e950b6ad85b08e5f",
+                "output": "fa1f298344cedbf79167a13304950b2e1d9d0ff7a2f02335fc5c590559afd826",
+                "transcript": "bcdb09c5f582e296e50ef9891deefca5d6ff2871578593ffedd386ea70efdc40"
+            },
+            "deterministic_settings": {
+                "fp_precision": "FP32",
+                "greedy_decoding": true,
+                "seed": 42
+            }
+        }
+    }
+}
